@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap/bootstrap.min.css">
+    <title>Treinamento jQuery</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h1>Treinamento de jQuery</h1>
+            </div>
+            <div class="col-6">
+                <div class="card card-default shadow">
+                    <div class="card-header">
+                        <h3 class="card-title">CSS e Animações:</h3>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="text-center">CODE</h1>
+                        <button type="button" class="btn btn-primary">Ativar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card card-default shadow">
+                    <div class="card-header">
+                        <h3 class="card-title">Pesquisa:</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 d-flex flex-row-reverse">
+                                <div class="d-flex flex-row-reverse mb-3">
+                                    <input type="text" class="form-control" id="pesquisa">
+                                    <span class="mr-2 mt-1">Pesquisar:</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <table class="table" id="pesquisaTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card card-default shadow">
+                    <div class="card-header">
+                        <h3 class="card-title">Form n pra n:</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="#" method="POST">
+                            <div class="formRow">
+                                <div class="form-group">
+                                    <label for="produto">Produto:</label>
+                                    <select name="produto[]" class="form-control" id="selectPruduto">
+                                        <option value="">Selecione</option>
+                                        <option value="1">Foto</option>
+                                        <option value="2">Adesivo</option>
+                                        <option value="3">Banner</option>
+                                    </select>
+                                </div>
+                                <div class="customForm">
+
+                                </div>
+                            </div>
+                            <button type="button" id="addProduto" class="btn btn-primary mb-2">Adicionar Produto</button>
+                            <div class="form-group row">
+                                <div class="col-6">
+                                    <label for="total">Total:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">R$</span>
+                                        </div>
+                                        <input type="text" class="form-control" name="total" placeholder="Total" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="formModels" hidden>
+            <div class="foto">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label for="tamanhoFoto[]">Tamanho:</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="quantidadeFoto[]">Quantidade:</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="preco[]">Preço por Unidade:</label>
+                    </div>
+                    <div class="col-4">
+                        <select name="tamanhoFoto[]" class="form-control" id="tamFoto">
+                            <option value="0">3x4</option>
+                            <option value="1" selected>10x15</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" name="quantidadeFoto[]" class="form-control" id="qtdFoto" min="1" value="1">
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">R$</span>
+                            </div>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="adesivo">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label for="altAdesivo">Altura (cm):</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="compAdesivo">Comprimento (cm)</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="qtdAdesivo">Quantidade:</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="preco">Preço por m<sup>2</sup> :</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="altAdesivo[]" id="altAdesivo" min="0.1" step="0.1">
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="compAdesivo[]" id="compAdesivo" min="0.1" step="0.1">
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="qtdAdesivo[]" id="qtdAdesivo" min="1">
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">R$</span>
+                            </div>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label for="altBanner">Altura (cm):</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="compBanner">Comprimento (cm)</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="qtdBanner">Quantidade:</label>
+                    </div>
+                    <div class="col-3">
+                        <label for="preco">Preço por m<sup>2</sup> :</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="altBanner[]" id="altBanner" min="0.1" step="0.1">
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="compBanner[]" id="compBanner" min="0.1" step="0.1">
+                    </div>
+                    <div class="col-3">
+                        <input type="number" name="qtdBanner[]" id="qtdBanner" min="1">
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">R$</span>
+                            </div>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="public/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="public/js/bootstrap/bootstrap.min.js"></script>
+    <script src="public/js/formNpraN.js"></script>
+  </body>
+</html>
