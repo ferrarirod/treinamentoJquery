@@ -115,6 +115,20 @@
             </div>
         </div>
         <div class="formModels" hidden>
+            <div class="formRowModel">
+                <div class="form-group">
+                    <label for="produto">Produto:</label>
+                    <select name="produto[]" class="form-control" id="selectPruduto" onchange="addModel($(this))">
+                        <option value="">Selecione</option>
+                        <option value="1">Foto</option>
+                        <option value="2">Adesivo</option>
+                        <option value="3">Banner</option>
+                    </select>
+                </div>
+                <div class="customForm">
+
+                </div>
+            </div>
             <div class="foto">
                 <div class="form-group row">
                     <div class="col-4">
@@ -124,23 +138,23 @@
                         <label for="quantidadeFoto[]">Quantidade:</label>
                     </div>
                     <div class="col-4">
-                        <label for="preco[]">Preço por Unidade:</label>
+                        <label for="preco[]">Preço</label>
                     </div>
                     <div class="col-4">
-                        <select name="tamanhoFoto[]" class="form-control" id="tamFoto">
+                        <select name="tamanhoFoto[]" class="form-control" id="tamFoto" onchange="precoFotos(this)">
                             <option value="0">3x4</option>
                             <option value="1" selected>10x15</option>
                         </select>
                     </div>
                     <div class="col-4">
-                        <input type="number" name="quantidadeFoto[]" class="form-control" id="qtdFoto" min="1" value="1">
+                        <input type="number" name="quantidadeFoto[]" class="form-control" id="qtdFoto" min="1" value="1" onchange="precoFotos(this)">
                     </div>
                     <div class="col-4">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">R$</span>
                             </div>
-                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço" disabled>
                         </div>
                     </div>
                 </div>
@@ -157,23 +171,23 @@
                         <label for="qtdAdesivo">Quantidade:</label>
                     </div>
                     <div class="col-3">
-                        <label for="preco">Preço por m<sup>2</sup> :</label>
+                        <label for="preco">Preço:</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" name="altAdesivo[]" id="altAdesivo" min="0.1" step="0.1">
+                        <input type="number" class="form-control" name="altAdesivo[]" id="altAdesivo" min="0.1" step="0.1" onchange="precoAdesivo(this)">
                     </div>
                     <div class="col-3">
-                        <input type="number" name="compAdesivo[]" id="compAdesivo" min="0.1" step="0.1">
+                        <input type="number" class="form-control" name="compAdesivo[]" id="compAdesivo" min="0.1" step="0.1" onchange="precoAdesivo(this)">
                     </div>
                     <div class="col-3">
-                        <input type="number" name="qtdAdesivo[]" id="qtdAdesivo" min="1">
+                        <input type="number" class="form-control" name="qtdAdesivo[]" id="qtdAdesivo" min="1" onchange="precoAdesivo(this)">
                     </div>
                     <div class="col-3">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">R$</span>
                             </div>
-                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço" disabled>
                         </div>
                     </div>
                 </div>
@@ -190,23 +204,23 @@
                         <label for="qtdBanner">Quantidade:</label>
                     </div>
                     <div class="col-3">
-                        <label for="preco">Preço por m<sup>2</sup> :</label>
+                        <label for="preco">Preço:</label>
                     </div>
                     <div class="col-3">
-                        <input type="number" name="altBanner[]" id="altBanner" min="0.1" step="0.1">
+                        <input type="number" class="form-control" name="altBanner[]" id="altBanner" min="0.1" step="0.1" onchange="precoBanner(this)">
                     </div>
                     <div class="col-3">
-                        <input type="number" name="compBanner[]" id="compBanner" min="0.1" step="0.1">
+                        <input type="number" class="form-control" name="compBanner[]" id="compBanner" min="0.1" step="0.1" onchange="precoBanner(this)">
                     </div>
                     <div class="col-3">
-                        <input type="number" name="qtdBanner[]" id="qtdBanner" min="1">
+                        <input type="number" class="form-control" name="qtdBanner[]" id="qtdBanner" min="1" onchange="precoBanner(this)">
                     </div>
                     <div class="col-3">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">R$</span>
                             </div>
-                            <input type="text" class="form-control" name="preco" placeholder="Preço por Unidade" disabled>
+                            <input type="text" class="form-control" name="preco" placeholder="Preço" disabled>
                         </div>
                     </div>
                 </div>
@@ -221,5 +235,6 @@
     <script src="public/js/cssEanimate.js"></script>
     <script src="public/js/pesquisa.js"></script>
     <script src="public/js/formNpraN.js"></script>
+    <script src="public/js/precos.js"></script>
   </body>
 </html>
