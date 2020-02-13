@@ -15,3 +15,18 @@ function addModel(select)
         $(select).closest('.formRow').find('.customForm').html($('.formModels .banner').clone());
     }
 }
+
+$('#addProduto').click(function(){
+    var form = $('.formModels .formRowModel').clone();
+    form.removeClass('formRowModel').addClass('formRow');
+    $(this).before(form);
+});
+
+function calcTotal()
+{
+    var total = 0;
+    $('.formRow').each(function(){
+        total += parseFloat($(this).find('[name="preco"]').val());
+    });
+    $('[name="total"]').val(total.toFixed(2));
+}

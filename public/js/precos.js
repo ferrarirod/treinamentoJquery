@@ -9,6 +9,7 @@ function precoFotos(input)
     {
         row.find('[name="preco"]').val(parseFloat(2.5 * row.find('[name="quantidadeFoto[]"]').val()).toFixed(2));   
     }
+    calcTotal();
 }
 
 function precoAdesivo(input)
@@ -23,6 +24,7 @@ function precoAdesivo(input)
     {
         row.find('[name="preco"]').val(parseFloat(area * 1.5).toFixed(2));   
     }
+    calcTotal();
 }
 
 function precoBanner(input)
@@ -37,4 +39,5 @@ function precoBanner(input)
     {
         row.find('[name="preco"]').val(parseFloat(area * 5).toFixed(2));   
     }
+    calcTotal();
 }
